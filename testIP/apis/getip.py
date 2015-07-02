@@ -2,7 +2,7 @@
 #__author__ = 'xiaobei'
 #__time__= '7/2/15'
 
-import flask
+import ujson
 from flask import request
 from testIP.core import success_response, error_response, application
 from testIP.core.config import C
@@ -23,6 +23,7 @@ def fullip():
     port = headers.get('REMOTE_PORT', '')
     url = 'http://api.map.baidu.com/location/ip?' + 'ak=%s&' % C.BAIDU_AK + '&ip=%s&coor=bd09ll' % (str(ip))
     res = curl.openurl(url)
+    res = ujson.loads(res)
     addr = ''
     if res and res['status'] == 0:
         addr = res['content']['address']
