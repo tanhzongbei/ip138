@@ -1,0 +1,5 @@
+MarkupSafe
+Werkzeug
+Jinja2
+Flask
+PyYAML

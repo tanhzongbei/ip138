@@ -1,0 +1,12 @@
+{
+    "debug": true,
+
+    "mysql" : {
+        "mydb": {
+                "host": "10.0.0.1",
+                "user": "python"
+        }
+    },
+
+    "BAIDU_AK" : "rT6MtA2aCPAGxxCaSN347RwO"
+}
